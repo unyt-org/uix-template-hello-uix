@@ -1,3 +1,4 @@
 *.js
 *.js.map
 deno.lock
+.datex-cache
