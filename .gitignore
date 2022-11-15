@@ -2,3 +2,4 @@
 *.js.map
 deno.lock
 .datex-cache
+.dx

@@ -15,7 +15,13 @@ services:
     working_dir: /app
     volumes:
       - ./src:/app
-    command: deno run --allow-read --allow-write --allow-env --allow-net provider.ts
+    command: 
+      - /bin/sh
+      - -c
+      - |
+          rm deno.lock
+          deno cache --reload provider.ts
+          deno run --allow-read --allow-write --allow-env --allow-net provider.ts
 
     ports:
       - ${UNYT_INTERNAL_PORT}:80
