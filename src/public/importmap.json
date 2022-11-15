@@ -1,0 +1,11 @@
+{
+	"imports": {
+	  "unyt_core": "https://cdn.unyt.org/unyt_core/datex.js",
+	  "unyt_core_all": "https://cdn.unyt.org/unyt_core/datex_all.js",
+	  "unyt_web": "https://cdn.unyt.org/unyt_web/",
+	  "unyt_node": "https://cdn.unyt.org/unyt_node/",
+	  "datex_short": "https://cdn.unyt.org/unyt_core/datex_short.js",
+	  "uix": "https://cdn.unyt.org/uix/uix.js",
+	  "uix_short": "https://cdn.unyt.org/unyt_core/uix_short.js"
+	}
+}

@@ -1,0 +1,39 @@
+version: "2"
+
+services:
+  EXAMPLE:
+  
+    environment:
+      - UNYT_HOST
+      - UNYT_NAME
+      - UNYT_INTERNAL_PORT
+
+    container_name: example
+
+    image: denoland/deno:alpine
+    hostname: code
+    working_dir: /app
+    volumes:
+      - ./src:/app
+    command: deno run --allow-read --allow-write --allow-env --allow-net provider.ts
+
+    ports:
+      - ${UNYT_INTERNAL_PORT}:80
+    expose:
+      - ${UNYT_INTERNAL_PORT}
+    networks:
+      - main
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${UNYT_NAME}.rule=Host(`${UNYT_HOST}`)"
+      - "traefik.http.routers.${UNYT_NAME}.entrypoints=web"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.${UNYT_NAME}.middlewares=redirect-to-https@docker"
+      - "traefik.http.routers.${UNYT_NAME}-secured.rule=Host(`${UNYT_HOST}`)"
+      - "traefik.http.routers.${UNYT_NAME}-secured.tls=true"
+      - "traefik.http.routers.${UNYT_NAME}-secured.tls.certresolver=myhttpchallenge"
+
+
+networks:
+  main:
+    external: true
