@@ -3,3 +3,5 @@
 deno.lock
 .datex-cache
 .dx
+*.compiled
+**/*.compiled

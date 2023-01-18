@@ -10,7 +10,7 @@ services:
 
     container_name: example
 
-    image: denoland/deno:alpine
+    image: denoland/deno:1.21.3
     hostname: code
     working_dir: /app
     volumes:
