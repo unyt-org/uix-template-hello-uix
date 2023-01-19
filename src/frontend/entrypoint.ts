@@ -3,7 +3,10 @@ import { Datex, $$, transformAsync, transform } from "unyt_core";
 
 // import Calculator and the calculations history array from the backend endpoint
 import { Calculator, calculations} from "../backend/calculator.ts";
+import { hello } from "../backend/entrypoint.ts";
 
+// call hello on backend
+hello("wöörld")
 
 
 // calculate the sum of a+b using the Calculator.sum method from the backend endpoint
@@ -24,3 +27,4 @@ document.body.querySelector("main")!.append(UIX.Utils.createHTMLElement("<div st
 
 // log when a new entry is added to the calculation array
 Datex.Value.observe(calculations, (calc)=>console.log("new calculation: " + calc))
+
