@@ -1,5 +1,4 @@
 
-import { $$ } from "unyt_core";
 import { UIX } from "uix";
 
 // start provider for client endpoint
