@@ -8,7 +8,6 @@ import { hello } from "../backend/entrypoint.ts";
 // call hello on backend
 hello("wöörld")
 
-
 // calculate the sum of a+b using the Calculator.sum method from the backend endpoint
 const a = $$ (0);
 const b = $$ (0);
