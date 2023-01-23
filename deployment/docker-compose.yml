@@ -15,7 +15,7 @@ services:
       - -c
       - |
           rm deno.lock
-          deno cache --reload ./backend/entrypoint.ts
+          deno cache --reload --no-check ./backend/entrypoint.ts
           deno run --allow-all --no-check --unstable ./backend/entrypoint.ts --watch
 
     ports:
