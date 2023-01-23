@@ -3,25 +3,20 @@ version: "2"
 services:
   EXAMPLE:
   
-    environment:
-      - UNYT_HOST
-      - UNYT_NAME
-      - UNYT_INTERNAL_PORT
-
-    container_name: example
+    container_name: ${UNYT_NAME}
 
     image: denoland/deno:1.21.3
     hostname: code
     working_dir: /app
     volumes:
-      - ./src:/app
-    command: 
+      - ../src:/app
+    command:
       - /bin/sh
       - -c
       - |
           rm deno.lock
-          deno cache --reload provider.ts
-          deno run --allow-read --allow-write --allow-env --allow-net provider.ts
+          deno cache --reload ./backend/entrypoint.ts
+          deno run --allow-read --allow-write --allow-env --allow-net ./backend/entrypoint.ts
 
     ports:
       - ${UNYT_INTERNAL_PORT}:80
