@@ -16,7 +16,7 @@ services:
       - |
           rm deno.lock
           deno cache --reload ./backend/entrypoint.ts
-          deno run --allow-read --allow-write --allow-env --allow-net ./backend/entrypoint.ts
+          deno run --allow-all --no-check --unstable ./backend/entrypoint.ts --watch
 
     ports:
       - ${UNYT_INTERNAL_PORT}:80
