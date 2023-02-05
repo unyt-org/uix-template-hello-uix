@@ -9,6 +9,12 @@
 		"unyt_tests/": "https://cdn.unyt.org/unyt_tests@dev/",
 		"unyt_web/": "https://cdn.unyt.org/unyt_web@dev/",
 		"unyt_node/": "https://cdn.unyt.org/unyt_node@dev/",
-		"unyt_cli/": "https://cdn.unyt.org/unyt_cli@dev/"
+		"unyt_cli/": "https://cdn.unyt.org/unyt_cli@dev/",
+		
+		"supranet/": 	"https://portal.unyt.org/ts_module_resolver/",
+
+		"backend/": "./backend/",
+		"common/": "./common/",
+		"frontend/": "./frontend/"
 	}
 }
