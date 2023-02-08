@@ -18,7 +18,6 @@ build-docker:
       --destination "${CI_REGISTRY_IMAGE}/deployment"
   only:
     - main
-    - master
 
 deploy-staging:
   stage: deploy
@@ -34,4 +33,3 @@ deploy-staging:
     - docker-compose --env-file ./deployment/.env -f deployment/docker-compose.yml up -d 
   only:
     - main
-    - master
