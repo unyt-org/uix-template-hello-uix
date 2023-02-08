@@ -24,13 +24,8 @@ deploy-staging:
   image: tiangolo/docker-with-compose
   needs: 
     - build-docker
-    - version
-  dependencies:
-    - version
   tags: 
     - docker-swarm-depl  
-  before_script:
-    - '[ -f ./version ] && export VERSION=$(cat ./version)'
   script:
     - printf "\nSTG_VERSION=${VERSION}" >> ./deployment/docker/.env
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
