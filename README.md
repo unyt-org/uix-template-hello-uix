@@ -5,7 +5,7 @@ This repository provides a simple UIX setup, including backend and frontend, a d
 # Project Structure
 
 ## Directories
-In the `src` directory, there are two directories. 
+The source code goes in two directories. 
 
 The `backend` directory contains the backend endpoint logic. The backend endpoint runs locally with deno.
 
@@ -31,13 +31,12 @@ Access to these exports can be limited by setting DATEX permission filters.
 # Development
 
 Compilation of the TS files is not required. The project can be deployed as is.
+There is a devcontainer set up with the latest and v1.21.3 deno versions installed. The latter is important for running the sample app.
 
 To run the project, you need deno v.1.21.3:
-```bash
-deno run --allow-all --no-check --unstable -q --import-map=importmap.dev.json https://cdn.unyt.org/uix@dev/run.ts --live
-```
+hit `ctrl`+`F5` to launch the project with the launch config
 
-With hhe `--live` option, frontend browser tabs are automatically reloaded when a file has changed, which is useful for development, but should not be used in production.
+With the `--live` option, frontend browser tabs are automatically reloaded when a file has changed, which is useful for development, but should not be used in production.
 
 This command starts the backend endpoint and also exposes a web server on port 80 for frontend endpoints.
 
@@ -54,3 +53,14 @@ uix --live
 ```
 
 (The docker container is currently only working on the main server)
+
+# Deployment files
+In the `deployment` folder there are files to build a docker image and a docker-compose to host it
+The `.gitlab-ci.yml` contains code to build and deploy the dockerfile
+
+To Test the deployment image run
+
+```bash
+docker image build . -f ./deployment/Dockerfile -t test
+docker run -it -p 5790:80 test
+```

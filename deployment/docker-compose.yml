@@ -1,22 +1,10 @@
 version: "2"
 
 services:
-  EXAMPLE:
+  TESTAPP:
   
     container_name: ${UNYT_NAME}
-
-    image: denoland/deno:1.21.3
-    hostname: code
-    working_dir: /app
-    volumes:
-      - ../src:/app
-    command:
-      - /bin/sh
-      - -c
-      - |
-          rm deno.lock
-          deno cache --reload --no-check ./backend/entrypoint.ts
-          deno run --allow-all --no-check --unstable ./backend/entrypoint.ts --watch
+    image: registry.git.unyt.org/unyt/code/templates/uix-templates/uix-base-project/deployment
 
     ports:
       - ${UNYT_INTERNAL_PORT}:80

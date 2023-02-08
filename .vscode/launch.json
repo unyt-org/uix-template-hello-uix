@@ -1,0 +1,24 @@
+{
+	"version": "0.2.0",
+	"configurations": [ 
+		{
+			"request": "launch",
+			"name": "Launch Endpoint",
+			"type": "node",
+			"program": "https://cdn.unyt.org/uix/run.ts",
+			"cwd": "${workspaceFolder}",
+			"runtimeExecutable": "/deno/v1.21.3/bin/deno",
+			"runtimeArgs": [
+				"run",
+				"--unstable",
+				"--no-check", "--importmap", "importmap.dev.json",
+				"--allow-all"
+			],
+			"attachSimplePort": 9229,
+			"args": [
+				"--live"
+			],
+			"console": "integratedTerminal"
+		}
+	]
+}

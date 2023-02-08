@@ -11,7 +11,7 @@ const b = $$ (0);
 const sum = await transformAsync([a,b], (a,b) => Calculator.sum(a,b));
 
 // log when a new entry is added to the calculation array
-Datex.Value.observe(calculations, calc => console.log("new calculation: " + calc))
+Datex.Value.observe(calculations, calc => console.log("new calculations: " + calc))
 
 
 // UI for setting a and b and displaying the sum
