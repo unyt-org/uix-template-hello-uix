@@ -28,7 +28,6 @@ deploy-staging:
   tags: 
     - docker-swarm-depl  
   script:
-    - printf "\nSTG_VERSION=${VERSION}" >> ./deployment/docker/.env
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     # - docker stack deploy -c deployment/docker-compose.yml --with-registry-auth my-stack
     - docker-compose --env-file ./deployment/.env -f deployment/docker-compose.yml pull
