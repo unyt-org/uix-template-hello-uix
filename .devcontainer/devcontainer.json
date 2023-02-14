@@ -23,6 +23,6 @@
 
     "remoteEnv": {
 		// ${localEnv:UserName}: windows  ${localEnv:USER} : linux
-        "ENDPOINT": "@test.dev_${localEnv:UserName}${localEnv:USER}"
+        "ENDPOINT": "@${localEnv:UserName}${localEnv:USER}.uix-base-project"
     }
 }
