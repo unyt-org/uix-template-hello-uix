@@ -14,7 +14,7 @@ build-docker:
     - >-
       /kaniko/executor
       --context "${CI_PROJECT_DIR}"
-      --dockerfile "${CI_PROJECT_DIR}/deployment/Dockerfile"
+      --dockerfile "${CI_PROJECT_DIR}/.deployment/Dockerfile"
       --destination "${CI_REGISTRY_IMAGE}/deployment"
   only:
     - main
@@ -29,7 +29,7 @@ deploy-staging:
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     # - docker stack deploy -c deployment/docker-compose.yml --with-registry-auth my-stack
-    - docker-compose --env-file ./deployment/.env -f deployment/docker-compose.yml pull
-    - docker-compose --env-file ./deployment/.env -f deployment/docker-compose.yml up -d 
+    - docker-compose --env-file ./.deployment/.env -f ./.deployment/docker-compose.yml pull
+    - docker-compose --env-file ./.deployment/.env -f ./.deployment/docker-compose.yml up -d 
   only:
     - main

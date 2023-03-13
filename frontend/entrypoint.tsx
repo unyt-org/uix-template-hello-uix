@@ -15,11 +15,11 @@ Datex.Value.observe(calculations, calc => console.log("new calculations: " + cal
 
 
 // UI for setting a and b and displaying the sum
-export default HTML `
-<div style='width:100%;height:100%;display:flex;justify-content:center;align-items:center;background:var(--bg_default)'>${[
-	new UIX.Elements.FloatInput(a),
-	"+",
-	new UIX.Elements.FloatInput(b),
-	"=",
-	new UIX.Elements.FloatInput(sum, {number_color: transform([sum], sum => sum < 0 ? C`red` : C`green`)}),
-]}</div>`
+export default 
+<div style='width:100%;height:100%;display:flex;justify-content:center;align-items:center;background:var(--bg_default)'>
+	{new UIX.Elements.FloatInput(a)}
+	+
+	{new UIX.Elements.FloatInput(b)}
+	=
+	<span>{sum}</span>
+</div>
