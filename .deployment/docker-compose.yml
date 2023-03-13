@@ -1,10 +1,10 @@
 version: "2"
 
 services:
-  TESTAPP:
+  DATEX-PLAYGROUND:
   
     container_name: ${UNYT_NAME}
-    image: registry.git.unyt.org/unyt/code/templates/uix-templates/uix-base-project/deployment
+    image: denoland/deno
 
     ports:
       - ${UNYT_INTERNAL_PORT}:80
@@ -12,6 +12,9 @@ services:
       - ${UNYT_INTERNAL_PORT}
     networks:
       - main
+    working_dir: /app
+    volumes:
+      - ../:/app
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.${UNYT_NAME}.rule=Host(`${UNYT_HOST}`)"
@@ -21,7 +24,14 @@ services:
       - "traefik.http.routers.${UNYT_NAME}-secured.rule=Host(`${UNYT_HOST}`)"
       - "traefik.http.routers.${UNYT_NAME}-secured.tls=true"
       - "traefik.http.routers.${UNYT_NAME}-secured.tls.certresolver=myhttpchallenge"
-
+    command: 
+      - /bin/sh
+      - -c
+      - |
+          rm deno.lock
+          deno cache --reload -q ./backend/entrypoint.ts
+          deno run -A -q https://dev.cdn.unyt.org/uix/run.ts --reload -w -v
+    restart: on-failure
 
 networks:
   main:

@@ -1,25 +1,21 @@
-import { UIX, C, HTML } from "uix";
-import { Datex, $$, transformAsync, transform } from "unyt_core";
 
-// import Calculator and the calculations history array from the backend endpoint
-import { Calculator, calculations} from "../backend/calculator.ts";
+import { $$, Datex } from "unyt_core";
+import { UIX } from "uix";
+import { DatexInterface } from "uix_std/datex/main.ts";
 
+UIX.Theme.setMode("dark")
+UIX.Routing.setPrefix(UIX.Routing.Prefix.PATH)
 
-// calculate the sum of a+b using the Calculator.sum method from the backend endpoint
-const a = $$ (0);
-const b = $$ (0);
-const sum = await transformAsync([a,b], (a,b) => Calculator.sum(a,b));
-
-// log when a new entry is added to the calculation array
-Datex.Value.observe(calculations, calc => console.log("new calculations: " + calc))
+const dx_interface = await lazy_eternal ?? $$(new DatexInterface({enable_routes:true, local_interface:true, removable:false, border_radius:0, temporary:true, bg_color:undefined}));
+export default dx_interface;
 
 
-// UI for setting a and b and displaying the sum
-export default HTML `
-<div style='width:100%;height:100%;display:flex;justify-content:center;align-items:center;background:var(--bg_default)'>${[
-	new UIX.Elements.FloatInput(a),
-	"+",
-	new UIX.Elements.FloatInput(b),
-	"=",
-	new UIX.Elements.FloatInput(sum, {number_color: transform([sum], sum => sum < 0 ? C`red` : C`green`)}),
-]}</div>`
+if ('launchQueue' in window) {
+	// @ts-ignore
+    window.launchQueue.setConsumer(async launchParams => {
+		if (launchParams.files?.[0]) {
+			const datex_file_data = await Datex.getDatexContentFromFileHandle(launchParams.files[0])
+			dx_interface.editor?.setFileData(datex_file_data)
+		}
+    });
+}
