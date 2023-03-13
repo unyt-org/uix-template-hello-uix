@@ -1,4 +1,1 @@
-name: "DATEX Playground"
-installable: true
-icon_path: 'https://dev.cdn.unyt.org/unyt_core/assets/square_dark_datex.png'
-offline_support: true
+name: "Example App"
