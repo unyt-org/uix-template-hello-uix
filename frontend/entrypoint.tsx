@@ -1,5 +1,5 @@
 import { UIX } from "uix";
-import { Datex, $$, transformAsync } from "unyt_core";
+import { Datex, transformAsync } from "unyt_core";
 
 // import Calculator and the calculations history array from the backend endpoint
 import { Calculator, calculations} from "../backend/calculator.ts";
