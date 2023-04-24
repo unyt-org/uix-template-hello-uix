@@ -6,7 +6,7 @@ export class Calculator {
 
 	static async sum (a:number, b:number) {
 		const sum = a + b;
-		calculations.push(`${a} + ${b} = ${sum}`); // save calculation history
+		calculationHistory.push(`${a} + ${b} = ${sum}`); // save calculation history
 		return await sum;
 	}
 
@@ -16,4 +16,4 @@ export class Calculator {
 /**
  * This array can also be accessed via module imports
  */
-export const calculations:string[] = $$ ([]);
+export const calculationHistory:string[] = $$ ([]);

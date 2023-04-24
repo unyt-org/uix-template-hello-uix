@@ -1,7 +1,3 @@
-*.js
-*.js.map
 deno.lock
 .datex-cache
-.dx
-*.compiled
-**/*.compiled
+.uix-cache
