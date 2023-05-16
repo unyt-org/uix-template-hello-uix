@@ -13,7 +13,8 @@
 		"jsxImportSource": "uix",
 		"lib": [
 			"dom",
-			"esnext"
+			"esnext",
+			"deno.window"
 		]
 	}
 }
