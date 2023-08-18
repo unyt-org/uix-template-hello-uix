@@ -1,5 +1,5 @@
 import { UIX } from "uix";
-import { Datex, always, transformAsync } from "unyt_core";
+import { Datex, always } from "unyt_core";
 // import Calculator and the calculations history array from the backend endpoint
 import { Calculator, calculationHistory} from "../backend/calculator.ts";
 
@@ -7,7 +7,7 @@ import { Calculator, calculationHistory} from "../backend/calculator.ts";
 UIX.Theme.setMode("light");
 
 // log when a new entry is added to the calculation array
-Datex.Value.observe(calculationHistory, calc => console.log("new calculation: " + calc))
+Datex.Ref.observe(calculationHistory, calc => console.log("new calculation: " + calc))
 
 // calculate the sum of a+b using the Calculator.sum method from the backend endpoint
 const a = $$ (0);
