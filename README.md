@@ -1,6 +1,6 @@
 # UIX Base Project
 
-This repository provides a simple UIX setup, including backend and frontend, a docker deployment configuration and configuration files.
+This repository provides a simple UIX setup, including backend, frontend and configuration files.
 
 # Project Structure
 
@@ -17,7 +17,7 @@ The directory names are important to tell UIX which code runs on which endpoint.
 
 ## app.dx
 
-The `app.dx` configuration file (an `app.json` file can also be used) is required for a UIX app to run. It at least needs to contain the app name.
+The `app.dx` configuration file is required for a UIX app to run. It at least needs to contain the app name.
 The `app.dx` has to be placed next to the app directories (`frontend` and `backend`) in the default configuration.
 
 # Cross realm imports
@@ -51,15 +51,3 @@ and start the app:
 ```bash
 uix --live
 ```
-
-# Deployment files
-In the `.deployment` folder there are files to build a docker image and a docker-compose to host it
-The `.gitlab-ci.yml` contains code to build and deploy the dockerfile
-
-To Test the deployment image run
-
-```bash
-docker image build . -f ./deployment/Dockerfile -t test
-docker run -it -p 5790:80 test
-```
-(The docker container is currently only working on the main server)
