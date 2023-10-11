@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:debian-10
+FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-21.04
 
 RUN mkdir -p /deno/latest
 

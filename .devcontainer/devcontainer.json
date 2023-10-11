@@ -1,17 +1,14 @@
 {
     "name": "Deno",
     "dockerFile": "Dockerfile",
-
-    // Set *default* container specific settings.json values on container create.
-    "settings": { 
-        "terminal.integrated.shell.linux": "/bin/bash"
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": ["denoland.vscode-deno"]
+        }
     },
-
-    // Add the IDs of extensions you want installed when the container is created.
-    "extensions": [
-        "denoland.vscode-deno"
-    ],
-
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
