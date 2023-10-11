@@ -3,6 +3,7 @@
         "unyt_core": "https://dev.cdn.unyt.org/unyt_core/datex.ts",
         "uix": "https://dev.cdn.unyt.org/uix/uix.ts",
         "unyt_core/": "https://dev.cdn.unyt.org/unyt_core/",
+        "datex-core-legacy/": "https://dev.cdn.unyt.org/unyt_core/",
         "uix/": "https://dev.cdn.unyt.org/uix/",
         "uix_std/": "https://dev.cdn.unyt.org/uix/uix_std/",
         "unyt_tests/": "https://dev.cdn.unyt.org/unyt_tests/",
