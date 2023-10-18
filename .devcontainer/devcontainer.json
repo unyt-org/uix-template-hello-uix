@@ -9,17 +9,10 @@
             "extensions": ["denoland.vscode-deno"]
         }
     },
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [],
-
-    // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
-    // "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
-
-	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode",
-
+    "forwardPorts": [80, 8080],
+    "remoteUser": "vscode",
     "remoteEnv": {
-		// ${localEnv:UserName}: windows  ${localEnv:USER} : linux
+        "PATH": "${containerEnv:PATH}:/home/vscode/.deno",
         "ENDPOINT": "@${localEnv:UserName}${localEnv:USER}.uix-base-project"
     }
 }
