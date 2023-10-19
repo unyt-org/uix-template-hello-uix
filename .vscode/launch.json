@@ -5,17 +5,10 @@
 			"request": "launch",
 			"name": "Launch Endpoint",
 			"type": "node",
-			"program": "https://cdn.unyt.org/uix/run.ts",
 			"cwd": "${workspaceFolder}",
-			"runtimeExecutable": "/deno/latest/bin/deno",
-			"runtimeArgs": [
-				"run",
-				"--no-check", "--importmap", "importmap.dev.json",
-				"--allow-all"
-			],
+			"runtimeExecutable": "/home/vscode/.deno/bin/uix",
 			"attachSimplePort": 9229,
 			"args": [
-				"--watch"
 			],
 			"console": "integratedTerminal"
 		}
