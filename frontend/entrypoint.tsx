@@ -1,4 +1,4 @@
-import { datexVersion, denoVersion, uixVersion } from "backend/entrypoint.tsx";
+import { datexVersion, denoVersion, uixVersion } from "../backend/entrypoint.tsx";
 
 export default 
 	<div>
