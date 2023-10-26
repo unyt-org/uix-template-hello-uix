@@ -1,0 +1,32 @@
+/**
+ * Global style definitions
+ */
+
+.hello-container {
+	font-family: Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+	h1 {
+		color: var(--text_highlight);
+	}	
+
+	a {
+		color:  var(--accent) ;
+    	text-decoration: none;
+	}
+
+	b {
+		color: var(--text_highlight);
+	}
+
+	section {
+		padding: 20px;
+		margin: 10px;
+		background:  var(--bg_default) ;
+		border-radius: 10px;
+	}
+}

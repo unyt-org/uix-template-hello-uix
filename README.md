@@ -10,8 +10,8 @@ The source code is split into two directories.
 The `backend` directory contains the backend endpoint logic. The backend endpoint runs locally with deno.
 
 The `frontend` directory contains the code for the frontend clients (running in the web browser).
-The `entrypoint.ts` module is loaded on the frontend client. The default export of this module is used as the UI root element.
-You can optionally also add an `entrypoint.ts` to the `backend` directory.
+The default export of the `backend/entrypoint.ts` and `frontend/entrypoint.ts` determine what content
+gets displayed when visiting a page in the browser.
 
 The directory names are important to tell UIX which code runs on which endpoint. The default names can also be changed in the `app.dx` config file.
 
