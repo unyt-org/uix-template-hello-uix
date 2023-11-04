@@ -4,7 +4,7 @@ import { datexVersion, denoVersion, uixVersion } from "../backend/data.ts";
 export default 
 	<main class="hello-container">
 		<section>
-			<h1>Welcome to UIX!</h1>
+			<h1>Welcome to UIX &lt;3</h1>
 			<p>This page was rendered on the <b>{UIX.context}</b></p>
 			<ul>
 				<li><b>UIX version:</b> {uixVersion}</li>
