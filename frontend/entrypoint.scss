@@ -1,0 +1,17 @@
+/**
+ * Global style definitions
+ */
+
+.hello-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    section {
+        padding: 20px;
+        margin: 10px;
+        background: var(--bg-content) ;
+        border-radius: 10px;
+    }
+}
