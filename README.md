@@ -7,7 +7,7 @@ This repository provides a simple UIX setup, including backend, frontend and con
 # Project Structure
 
 ## Directories
-The source code is split into two directories. 
+The source code is split into three directories. 
 
 The `backend` directory contains the backend logic that runs on [Deno](https://deno.com/).
 
@@ -37,7 +37,7 @@ Access to these exports can be limited by setting DATEX permission filters.
 Compilation of the TS files is not required. The project can be deployed as is.
 There is a devcontainer set up, containing the latest deno version.
 
-To run the project, you deno has to be installed:
+To run the project, Deno has to be installed:
 hit `CTRL`+`F5` to launch the project with the launch configuration.
 
 With the `--live` option, frontend browser tabs are automatically reloaded when a file has changed, which is useful for development, but should not be used in production.
