@@ -5,7 +5,8 @@
         "jsx": "react-jsx",
         "jsxImportSource": "uix",
         "lib": [
-            "deno.window"
+            "deno.window",
+            "dom"
         ]
     }
 }
