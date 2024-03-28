@@ -43,3 +43,7 @@ hit `CTRL`+`F5` to launch the project with the launch configuration.
 With the `--live` option, frontend browser tabs are automatically reloaded when a file has changed, which is useful for development, but should not be used in production.
 
 This command starts the backend endpoint and also exposes a web server on port 80 or another available port.
+
+---
+
+<sub>&copy; unyt 2024 • [unyt.org](https://unyt.org)</sub>
