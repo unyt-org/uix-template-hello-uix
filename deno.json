@@ -8,5 +8,8 @@
             "deno.window",
             "dom"
         ]
+    },
+    "tasks": {
+        "test": "deno run -A --import-map https://cdn.unyt.org/importmap.json https://cdn.unyt.org/unyt-tests/run.ts -w"
     }
 }
