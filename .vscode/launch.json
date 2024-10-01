@@ -1,0 +1,16 @@
+{
+	"version": "0.2.0",
+	"configurations": [ 
+		{
+			"request": "launch",
+			"name": "Run UIX App",
+			"type": "node",
+			"cwd": "${workspaceFolder}",
+			"runtimeExecutable": "/home/vscode/.uix/bin/uix",
+			"args": [
+				"-y"
+			],
+			"console": "integratedTerminal"
+		}
+	]
+}
