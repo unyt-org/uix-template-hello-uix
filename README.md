@@ -38,10 +38,12 @@ curl -fsSL https://unyt.land/install.sh | bash
 Let’s launch your first app — our very own *Hello, UIX* moment:
 
 ```bash
-uix --init uix-base-project
+uix --init MyFirstApp
 ```
+When running the `uix --init` command, UIX will automatically clone this repository and launch the demo application.
 
-*Looks too easy? But really - that is all it takes!* 
+*Looks too easy? But really - that is all it takes!*
+
 
 
 ## Project Structure
