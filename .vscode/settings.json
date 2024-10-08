@@ -1,4 +1,3 @@
 {
-	"deno.enable": true,
-	"deno.path": "/home/vscode/.uix/bin/deno",
+	"deno.enable": true
 }
