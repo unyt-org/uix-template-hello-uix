@@ -36,7 +36,7 @@ curl -fsSL https://unyt.land/install.sh | bash
 Let’s launch your first app — our very own *Hello, UIX* moment:
 
 ```bash
-uix
+uix --init uix-base-project
 ```
 
 *Looks too easy? But really - that is all it takes!* 
