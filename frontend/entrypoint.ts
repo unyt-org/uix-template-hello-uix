@@ -6,5 +6,5 @@
 
 export default {
 	// show frontend-rendered page on /frontend
-	'/frontend': import("../common/page.tsx") 
+	'/frontend': import("common/page.tsx") 
 }
