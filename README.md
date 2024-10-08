@@ -61,7 +61,7 @@ The directory names (`backend`, `frontend`, `common`) are important to tell UIX 
 The `app.dx` configuration file is required for a UIX app to run. It needs to contain at least the app name.
 The `app.dx` has to be placed next to the app directories (`frontend`, `backend` and `common`).
 
-## Cross realm imports
+### Cross realm imports
 
 Frontend and common modules can import exported values from backend modules.
 In the background, special interface module files are generated, making sure that the backend source code is never exposed to the frontend endpoints.
