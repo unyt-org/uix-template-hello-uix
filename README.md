@@ -2,6 +2,8 @@
 
 This repository offers a simple setup for running your first [UIX](https://github.com/unyt-org/uix) application that integrates both frontend and backend rendered content. Indeed - it is our equivalent to the famous *Hello, World!* program.
 
+<img src=".github/res/welcome-banner.png">
+
 For more information, make sure to check out our [UIX Documentation](https://docs.unyt.org/manual/uix/getting-started).
 
 ## Getting Started
