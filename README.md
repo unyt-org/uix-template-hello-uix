@@ -1,4 +1,4 @@
-# UIX Base Project
+# UIX Template: Hello UIX
 
 This repository offers a simple setup for running your first [UIX](https://github.com/unyt-org/uix) application that integrates both frontend and backend rendered content. Indeed - it is our equivalent to the famous *Hello, World!* program.
 
