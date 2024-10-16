@@ -8,7 +8,8 @@
 			"cwd": "${workspaceFolder}",
 			"runtimeExecutable": "/home/vscode/.uix/bin/uix",
 			"args": [
-				"-y"
+				"-y",
+				"-l"
 			],
 			"console": "integratedTerminal"
 		}
