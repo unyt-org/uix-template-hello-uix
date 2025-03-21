@@ -1,16 +1,16 @@
 {
-    "name": "UIX project",
-    "dockerFile": "Dockerfile",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash"
-            },
-            "extensions": ["denoland.vscode-deno", "unytorg.datex-workbench"]
-        }
-    },
-    "remoteUser": "vscode",
-    "remoteEnv": {
-        "PATH": "${containerEnv:PATH}:/home/vscode/.uix/bin"
+  "name": "UIX project",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": ["denoland.vscode-deno", "unytorg.datex-workbench"]
     }
+  },
+  "remoteUser": "vscode",
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/home/vscode/.uix/bin"
+  }
 }
